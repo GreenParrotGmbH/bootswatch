@@ -1,0 +1,445 @@
+.inner-border(@color: #999) {
+    -webkit-box-shadow: inset 1px 1px 1px @color;
+       -moz-box-shadow: inset 1px 1px 1px @color;
+            box-shadow: inset 1px 1px 1px @color;
+}
+
+.ellipsis {
+    -o-text-overflow: ellipsis;
+   -ms-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+}
+
+.box-sizing(@sizing: border-box) {
+    -webkit-box-sizing: @sizing;
+	-ms-box-sizing: @sizing;
+       -moz-box-sizing: @sizing;
+            box-sizing: @sizing;
+}
+
+.border-box {
+    -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.wrap {
+	-ms-word-break: normal;
+	    word-break: normal;
+	 -ms-word-wrap: break-word;
+	     word-wrap: break-word;
+}
+
+.placeholder-color(@color) {
+    &::-webkit-input-placeholder {
+        color: @color;
+    }
+
+    &:-moz-placeholder {
+        color: @color;
+        .opacity(1.0);
+    }
+
+    &::-moz-placeholder {
+        color: @color;
+        .opacity(1.0);
+    }
+
+    &:-ms-input-placeholder {
+        color: @color;
+    }
+}
+
+.text-shadow(@x-axis: 1px, @y-axis: 1px, @blur: 1px, @color: #000) {
+    -webkit-text-shadow: @x-axis @y-axis @blur @color;
+            text-shadow: @x-axis @y-axis @blur @color;
+}
+
+.text-shadow-none {
+    -webkit-text-shadow: none;
+            text-shadow: none;
+}
+
+.box-shadow-colored(@axis, @color) {
+    -webkit-box-shadow: 0 0 @axis @color; 
+       -moz-box-shadow: 0 0 @axis @color;  
+            box-shadow: 0 0 @axis @color;
+}
+
+.box-shadow-none {
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+            box-shadow: none;
+}
+
+.box-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+          box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-combined(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1, @x-axis-inner: 0, @y-axis-inner: 0, @blur-inner: 2px, @color: #fff) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha), inset @x-axis-inner @y-axis-inner @blur-inner @color;
+     -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha), inset @x-axis-inner @y-axis-inner @blur-inner @color;
+          box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha), inset @x-axis-inner @y-axis-inner @blur-inner @color;
+}
+
+.box-shadow-inner(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+     -moz-box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+          box-shadow: inset @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow-raw(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+
+.border-radius-clip {
+    -webkit-background-clip: padding-box; 
+       -moz-background-clip: padding; 
+            background-clip: padding-box;
+	
+}
+
+.border-radius (@radius: 4px) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+    .border-radius-clip;
+}
+
+.border-radius(@topright, @bottomright, @bottomleft, @topleft) {
+    -webkit-border-radius: @topright @bottomright @bottomleft @topleft;
+       -moz-border-radius: @topright @bottomright @bottomleft @topleft;
+            border-radius: @topright @bottomright @bottomleft @topleft;
+    .border-radius-clip;
+}
+
+.border-radius-left (@radius: 4px) {
+    -webkit-border-radius: @radius 0 0 @radius;
+       -moz-border-radius: @radius 0 0 @radius;
+            border-radius: @radius 0 0 @radius;
+}
+
+.border-radius-right (@radius: 4px) {
+    -webkit-border-radius: 0 @radius @radius 0;
+       -moz-border-radius: 0 @radius @radius 0;
+  	    border-radius: 0 @radius @radius 0;
+}
+
+.border-radius-bottom (@radius: 4px) {
+    -webkit-border-radius: 0 0 @radius @radius;
+       -moz-border-radius: 0 0 @radius @radius;
+	    border-radius: 0 0 @radius @radius;
+}
+
+.border-radius-top (@radius: 4px) {
+    -webkit-border-radius: @radius @radius 0 0;
+       -moz-border-radius: @radius @radius 0 0;
+	    border-radius: @radius @radius 0 0;
+}
+
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+.transition-delay(@transition-delay) {
+    -webkit-transition-delay: @transition-delay;
+       -moz-transition-delay: @transition-delay;
+         -o-transition-delay: @transition-delay;
+            transition-delay: @transition-delay;
+}
+
+.transition-duration(@transition-duration) {
+    -webkit-transition-duration: @transition-duration;
+       -moz-transition-duration: @transition-duration;
+         -o-transition-duration: @transition-duration;
+            transition-duration: @transition-duration;
+}
+
+.rotate(@degrees) {
+    -webkit-transform: rotate(@degrees);
+       -moz-transform: rotate(@degrees);
+        -ms-transform: rotate(@degrees);
+         -o-transform: rotate(@degrees);
+            transform: rotate(@degrees);
+}
+
+.scale(@ratio) {
+    -webkit-transform: scale(@ratio);
+       -moz-transform: scale(@ratio);
+        -ms-transform: scale(@ratio);
+         -o-transform: scale(@ratio);
+            transform: scale(@ratio);
+}
+
+.translate(@x, @y) {
+    -webkit-transform: translate(@x, @y);
+       -moz-transform: translate(@x, @y);
+        -ms-transform: translate(@x, @y);
+         -o-transform: translate(@x, @y);
+            transform: translate(@x, @y);
+}
+
+.skew(@x, @y) {
+    -webkit-transform: skew(@x, @y);
+       -moz-transform: skew(@x, @y);
+        -ms-transform: skewX(@x) skewY(@y);
+         -o-transform: skew(@x, @y);
+            transform: skew(@x, @y);
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.translate3d(@x, @y, @z) {
+    -webkit-transform: translate3d(@x, @y, @z);
+       -moz-transform: translate3d(@x, @y, @z);
+        -ms-transform: translate3d(@x, @y, @z);
+         -o-transform: translate3d(@x, @y, @z);
+            transform: translate3d(@x, @y, @z);
+}
+
+.absolute(@top,  @right, @bottom, @left) {
+    top: @top;  left: @left;  right: @right; bottom: @bottom; position: absolute;
+}
+ 
+.opacity(@value) {
+    @opacityPercentage: @value * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@opacityPercentage)";
+      -moz-opacity: @value;
+    -khtml-opacity: @value;
+           opacity: @value;
+    filter: alpha(opacity=@opacityPercentage);
+}
+
+.truncate {
+    .ellipsis;
+    display: block;
+    width: auto;
+    white-space: nowrap;
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.gradient(@stop: #EEE, @start: #FFF) {
+    background: @start;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+    background: -ms-linear-gradient(bottom, @start, @stop);
+    background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+    background: -o-linear-gradient(@stop, @start);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+}
+
+h1, .h1 {
+    color: #666;
+    text-align: left;
+    font-size: 1.9em;
+    line-height: 1.4em;
+    display: block;
+}
+
+h2, .h2 {
+    color: black;
+	font-weight: 700;
+	text-transform: uppercase;
+    font-size: 1.5em;
+    line-height: 1.4em;
+    display: block;
+}
+
+h3, .h3 {
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+	font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    display: block;
+    color: #939393;
+}
+
+h4, .h4 {
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: normal;
+    font-size: 14px;	
+    margin-top: 10px;
+    margin-bottom: 5px;
+    line-height: 1.4em;
+    display: block;
+}
+
+hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px sold #ddd;
+}
+
+p {
+    line-height: 18px;
+}
+
+.btn-ml {
+	font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.btn {
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.btn-default {
+    & {	
+        .box-shadow(0px, 2px, 2px, 0.1);
+        .gradient(#fff, #F4F4F4);
+        border-color: #ccc;
+        text-transform: none;
+        font-weight: normal;
+    }
+    
+    &:hover {
+        background: #E4E4E4;
+    }
+}
+
+.btn-primary {
+    & {	
+        .box-shadow-combined(0px, 2px, 2px, 0.2, 0px, 2px, 1px, #4DB8DA);
+        .gradient(#1AA2D2, #0099CB);
+        .text-shadow(0px, 1px, 0px, #0087B6);
+    }
+    
+    &:hover {
+        .box-shadow(0px, 2px, 2px, 0.2);
+        background: #007AA3;
+    }
+}
+
+.btn-warning {
+    & {	
+        .box-shadow-combined(0px, 2px, 2px, 0.2, 0px, 2px, 1px, #F5C684);
+        .gradient(#F1B55F, #F0AD4E);
+        .text-shadow(0px, 1px, 0px, #E99632);
+    }
+    
+    &:hover {
+        .box-shadow(0px, 2px, 2px, 0.2);
+        background: #ED9C28;
+    }
+}
+
+.btn-info {
+    & {	
+        .box-shadow-combined(0px, 2px, 2px, 0.2, 0px, 2px, 1px, #8BDCED);
+        .gradient(#5FD2EF, #4FCFEF);
+        .text-shadow(0px, 1px, 0px, #0090B5);
+    }
+    
+    &:hover {
+        .box-shadow(0px, 2px, 2px, 0.2);
+        background: #27C3EA;
+    }
+}
+
+.btn-success {
+    & {	
+        .box-shadow-combined(0px, 2px, 2px, 0.2, 0px, 2px, 1px, #40D640);
+        .gradient(#18CE18, #00C900);
+        .text-shadow(0px, 1px, 0px, #00B500);
+    }
+    
+    &:hover {
+        .box-shadow(0px, 2px, 2px, 0.2);
+        background: #00A000;
+    }
+}
+
+.btn-danger {
+    & {	
+        .box-shadow-combined(0px, 2px, 2px, 0.2, 0px, 2px, 1px, #D65755);
+        .gradient(#CC2626, #C90300);
+        .text-shadow(0px, 1px, 0px, #B50300);
+    }
+    
+    &:hover {
+        .box-shadow(0px, 2px, 2px, 0.2);
+        background: #A00200;
+    }
+}
+
+.btn-group {
+    .btn {
+        .box-shadow(0px, 2px, 2px, 0.1);
+        font-weight: normal;
+    }
+    
+    .btn:active, .btn.active {
+        .box-shadow-inner(0, 3, 5, 0.14);
+    }
+    
+    .btn-default {
+        &:active, &.active {
+            & {
+                .box-shadow-inner(0, 2px, 5px, 0.2);
+                .gradient(#1AA2D2, #0099CB);
+                .text-shadow(0px, 1px, 0px, #0087B6);
+                background: #0099CB;
+                border-color: #0099CB;
+                color: white;
+            }
+            
+            &:hover {
+                background: darken(#0099CB, 5%);
+            }
+        }
+    }
+}
+
+.input-ml {
+	font-size: 14px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+	height: 42px;
+}
+
+.input-group-btn {
+    .btn {
+        .box-shadow-none;
+    }
+    
+    .btn.btn-sm {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        min-height: 30px;
+    }
+    
+    .btn.btn-lg {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-height: 45px;
+    }
+    
+     .btn.btn-ml {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        min-height: 42px;
+    }
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+}
+
+input, button, select {
+    outline: none;
+}
